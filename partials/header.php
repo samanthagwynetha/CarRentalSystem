@@ -20,13 +20,13 @@ require 'config/database.php';
 <body>
   <nav>
     <div class="container nav_container">
-      <a href="<?= ROOT_URL ?>" class="nav_logo">Car Rent</a>
+      <a href="<?= ROOT_URL ?>" class="nav_logo">PANAN </a>
       <ul class="nav_items">
         <li><a href=#home>Home</a></li>
         <li><a href=#home-about>About Us</a></li>
         <li><a href="#home-services">Services</a></li>
         <li><a href=#home-contact>Contact Us</a></li>
-        <li><a href="<?= ROOT_URL ?>signin.php">Sign In</a></li>
+        <li><a href="<?= ROOT_URL ?>signin.php" class="sign-in-btn">Sign In</a></li>
      
    
           </ul>
@@ -36,4 +36,4 @@ require 'config/database.php';
       <button id="close_nav-btn"><i class="uil uil-multiply"></i></button>
     </div>
   </nav>
- <!--===================END OF NAV==============================================-->
+ <!--===================END OF NAV==============================================-->  
