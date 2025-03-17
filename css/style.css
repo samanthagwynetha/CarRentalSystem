@@ -69,15 +69,15 @@ body{
     margin-inline: auto;
 }
 
-section{ /*HOME CONTAINERS*/
+/* section{ 
   padding: 4rem 0 2rem;
   margin-top: 3rem;
   width: 100vm;
-}
+} */
 
-.section_extra-margin{
+/* .section_extra-margin{
   margin-top: 7rem;
-}
+} */
 
 h1,h2,h3,h4{
   color: var(--color-terra);
@@ -260,6 +260,111 @@ nav button{
   background-color: var(--color-bg);
 }
 
+
+.home-services {
+  padding: 2rem 0;
+  background-color: var(--color-terra);
+  text-align: center;
+}
+
+.home-services .top-text {
+  font-size: 1.5rem;
+  color: var(--color-terra);
+  margin-bottom: 1rem;
+}
+
+.home-services .sersec {
+  font-size: 2rem;
+  color: var(--color-terra);
+  margin-bottom: 2rem;
+}
+
+.posts_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.post {
+  background-color: var(--color-white);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px; /* Set a specific width for each post */
+}
+
+.post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.post_thumbnail {
+  width: 100%;
+  height: 175px;
+  overflow: hidden;
+}
+
+.post_thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post_info {
+  padding: 1rem;
+  text-align: left;
+}
+
+.post_info .category_button {
+  display: inline-block;
+  background-color: var(--color-terra);
+  color: var(--color-bg);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+.post_info .post_title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-terra);
+}
+
+.post_info .post_title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.post_info .RatePerDay {
+  font-size: 1rem;
+  color: var(--color-dark);
+  margin-bottom: 0.5rem;
+}
+
+.post_info .vPLNo,
+.post_info .Availability {
+  font-size: 0.875rem;
+  color: var(--color-dark);
+  margin-bottom: 0.5rem;
+}
+
+.rent-btn {
+  background-color: var(--color-terra);
+  color: var(--color-bg);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rent-btn:hover {
+  background-color: var(--color-terra-dark);
+}
 /*.car0-container {
   animation: float 3s linear infinite;
 }*/
@@ -317,37 +422,6 @@ nav button{
 }
 
 /*===============================ABOUT==================================*/
-/* .home-about{
-  background: var(--color-limestone);
-  display: grid;
-  align-items: center;
-  grid-template-columns: repeat(2,1fr);
-  gap: 1.5rem;
-
-}
-
-.about-img img{
-  max-width: 60%;
-  border-radius: 0.5rem;
-  margin-left: 10rem;
-  margin-bottom: 2rem;
-}
-.about-text{
-  margin-right: 5rem;
-  margin-left: 5rem;
-
-}
-
-.about-text h2{
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  color: var(--color-orange);
-}
-.about-text p{
-  font-size: 0.93rem;
-  margin: 00.5rem 0 1.1rem;
-  color: white;
-}  */
 
 .about-container {
   display: flex;
@@ -361,16 +435,18 @@ nav button{
 .about-heading {
   font-size: 2rem;
   color: var(--color-bg);
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
   text-align: center;
 }
 
-
-.about-sub {
-  font-size: 2rem;
-  color: var(--color-bg);
-  margin-bottom: 1rem;
-  text-align: center;
+.about-subheading {
+  font-size: 1.00rem; /* Adjust the font size */
+  color: var(--color-davy); /* Use the background color variable */
+  margin-top: 0; /* Remove the top margin */
+  margin-bottom: 1rem; /* Reduce the space below the subheading */
+  text-align: center; /* Center the text */
+  max-width: 550px; /* Limit the width for better readability */
+  line-height: 1.5;
 }
 
 .about-boxes {
@@ -384,16 +460,16 @@ nav button{
 .about-box {
   width: 30%; /* Set a specific width for each box */
   height: 300px; /* Set a specific height for each box */
-  background-color: var(--color-white);
   padding: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  overflow: hidden; /* Ensure content does not overflow */
 }
 
 .about-box img.about-icon {
@@ -405,18 +481,23 @@ nav button{
 .about-box h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: var(--color-bg);
+  color: var(--color-black);
 }
 
 .about-box p {
   font-size: 1rem;
-  color: var(--color-bg);
+  color: var(--color-davy);
   line-height: 1.5;
+  overflow: hidden; /* Ensure paragraph content does not overflow */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* Limit to 5 lines */
+  -webkit-box-orient: vertical;
 }
 
 .about-box:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
 }
 
 /*===============================CONTACT US==================================*/
@@ -488,23 +569,36 @@ nav button{
 
 /*===============================GENERAl SERVICE ;>==================================*/
 
-.top-text{
-  display: flex;
-  justify-content: center;
-  align-items: center;  
+.header {
+  font-size: 2rem; /* Adjust the font size */
+  color: var(--color-black); /* Use the color variable */
+  text-align: center; /* Center the text */
+  margin-bottom: 1rem; /* Add some space below the header */
 }
 
-.sersec{
+.top-text.subheading {
+  font-size: 1.00rem; /* Adjust the font size */
+  color: var(--color-davy); /* Use the color variable */
+  margin-top: 0; /* Remove the top margin */
+  margin-bottom: 2rem; /* Add some space below the subheading */
+  text-align: center; /* Center the text */
+  max-width: 550px; /* Limit the width for better readability */
+  line-height: 1.5; /* Improve line spacing */
+  margin-left: auto; /* Center the element horizontally */
+  margin-right: auto; /* Center the element horizontally */
+}
+
+/* .sersec{
   margin-bottom: 80px;
-}
+} */
 
-.post_thumbnail {
+/* .post_thumbnail {
   border-radius: var(--card-border-radius-5)0;
   border: 1rem solid var(--color-orange);
   overflow: hidden;
   margin-bottom:1.6rem;
 
-}
+} */
 
 .thumbnail_img{
   width: 100%;
@@ -552,14 +646,12 @@ nav button{
   /*===============================CATEGORY BUTTONS==================================*/
   .category_buttons{
     padding: 4rem 0;
-    border-top: 2px solid var(--color-gray-900);
-    border-bottom: 2px solid var(--color-gray-900);
   }
 
   .category_buttons-container{
     width: fit-content;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
   }
 
@@ -1015,38 +1107,45 @@ footer ul a:hover{
     grid-template-columns: 1fr;
   }
 /*===============================ABOUT==================================*/
-.home-about{
-  grid-template-columns: 1fr;
-}
-    /*===============================GENERAL FORM==================================*/
-    .form_section-container{
-      padding: 0;      
-    }
-      /*===============================DASHBOARD==================================*/
-      .dashboard_container{
-        grid-template-columns: 4.5rem auto;
-        padding: 0;
-        background: transparent;
-      }
+  .about-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
 
-      .dashboard aside h5{
-        display: none;
-      }
+  .about-box {
+    width: 80%; /* Adjust width for tablet devices */
+    height: auto; /* Allow height to adjust based on content */
+  }
 
-      .dashboard main table thead{
-        display: none;
-      }
-      .dashboard main table tr {
-        display: flex;
-        flex-direction: column;
-         
-      }
-      .dashboard main table tr:nth-child(even){
-        background: var(--color-gray-900);
-      }
-      .dashboard main table tr:hover td{
-        background: transparent;
-      }
+  /*===============================GENERAL FORM==================================*/
+  .form_section-container{
+    padding: 0;      
+  }
+  /*===============================DASHBOARD==================================*/
+  .dashboard_container{
+    grid-template-columns: 4.5rem auto;
+    padding: 0;
+    background: transparent;
+  }
+
+  .dashboard aside h5{
+    display: none;
+  }
+
+  .dashboard main table thead{
+    display: none;
+  }
+  .dashboard main table tr {
+    display: flex;
+    flex-direction: column;
+      
+  }
+  .dashboard main table tr:nth-child(even){
+    background: var(--color-gray-900);
+  }
+  .dashboard main table tr:hover td{
+    background: transparent;
+  }
 
 }
 
@@ -1088,7 +1187,36 @@ footer ul a:hover{
   }
 
   /*===============================ABOUT==================================*/
-    
+ .about-heading {
+    font-size: 1.5rem;
+  }
+
+  .about-subheading {
+    font-size: 1.2rem;
+  }
+
+  .about-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-box {
+    width: 100%; /* Adjust width for mobile devices */
+    height: auto; /* Allow height to adjust based on content */
+  }
+
+  .about-box img.about-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .about-box h2 {
+    font-size: 1.2rem;
+  }
+
+  .about-box p {
+    font-size: 0.9rem;
+  }   
 
   /*===============================CONTACT==================================*/
 

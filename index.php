@@ -31,15 +31,25 @@ $vehicles = mysqli_query($connection, $query);
 
 
   <!--===========================ABOUT==================================-->
-
-<section class="home-about" id="home-about">
-<div class="about-img">
-  <img src="images/about-img.webp" alt="">
-</div>
-
-<div class="about-text">
-  <h2>PAN-AN - Your Siargao Adventure Partner</h2>
-  <p>PAN-AN is your trusted partner for unforgettable adventures on Siargao Island. Founded by the renowned Puno family, known for their successful businesses in Davao City and Siargao, PAN-AN is dedicated to enhancing your Siargao experience. They provide top-notch rental vehicles and exceptional service, reflecting their mission to "carry" you on a journey of discovery around this breathtaking island. PAN-AN prioritizes convenience and comfort by offering a wide range of meticulously maintained rental vehicles, suitable for solo travelers, families, and groups. Their vehicles are designed to handle Siargao's diverse terrains, ensuring ease of navigation while exploring the island's beauty.</p>
+  <section class="about-container" id="home-about">
+  <h2 class="about-heading">About Us</h2>
+  <p class="about-subheading">Panan makes exploring Siargao easy with reliable rentals and excellent service.</p>
+  <div class="about-boxes">
+    <div class="about-box">
+      <img src="images/logo/who.png" alt="Who We Are Icon" class="about-icon">
+      <h2>Who We Are</h2>
+      <p>Panan is your trusted car rental service on Siargao Island, founded by the esteemed Puno family. With a legacy of successful businesses in Davao City and Siargao, we are dedicated to providing reliable and high-quality rental vehicles.</p>
+    </div>
+    <div class="about-box">
+      <img src="images/logo/offer.png" alt="What We Offer Icon" class="about-icon">
+      <h2>What We Offer</h2>
+      <p>We provide a range of well-maintained vehicles suited for solo travelers, families, and groups. Our rentals are designed to handle Siargao’s diverse terrains, ensuring a smooth and comfortable journey.</p>
+    </div>
+    <div class="about-box">
+      <img src="images/logo/commitment.png" alt="Our Commitment Icon" class="about-icon">
+      <h2>Our Commitment</h2>
+      <p>At Panan, we prioritize convenience, safety, and exceptional service. Our goal is to enhance your Siargao adventure by offering hassle-free rentals and a seamless travel experience.</p>
+    </div>
   </div>
 </section>
 
