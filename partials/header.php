@@ -25,7 +25,7 @@ require 'config/database.php';
         <li><a href=#home>Home</a></li>
         <li><a href=#home-about>About Us</a></li>
         <li><a href="#home-services">Services</a></li>
-        <li><a href=#home-contact>Contact Us</a></li>
+        <li><a href=#contact>Contact Us</a></li>
         <li><a href="<?= ROOT_URL ?>signin.php" class="sign-in-btn">Sign In</a></li>
      
    

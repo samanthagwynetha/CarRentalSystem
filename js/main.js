@@ -36,3 +36,11 @@ const hideSidebar = () => {
 
 showSidebarBtn.addEventListener('click', showSidebar);
 hideSidebarBtn.addEventListener('click', hideSidebar);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const homeText = document.querySelector(".home-text");
+
+  // Add the 'visible' class to h1 and p when the page loads
+  homeText.querySelector("h1").classList.add("visible");
+  homeText.querySelector("p").classList.add("visible");
+});

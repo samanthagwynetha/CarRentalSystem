@@ -14,9 +14,9 @@ $vehicles = mysqli_query($connection, $query);
 
 <section class="home" id="home">
   <div class="home-text">
-    <h1>  
+    <h1 class = "visible">  
        Looking to rent <br>  a <span>car</span></h1>
-    <p>PRC, your gateway to hassle-free, convenient, and reliable car rentals. <br> Explore our diverse fleet, find the perfect vehicle for your needs, 
+    <p class="visible">PRC, your gateway to hassle-free, convenient, and reliable car rentals. <br> Explore our diverse fleet, find the perfect vehicle for your needs, 
       and <br> book with confidence. Your journey begins here.</p>
 
       <button class="home-btn" >

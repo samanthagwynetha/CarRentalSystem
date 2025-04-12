@@ -245,6 +245,13 @@ nav button{
   font-size: 3.4rem;
   letter-spacing: 1px;
   color: white;
+  animation: fadeInUp 1s ease-out 0.2s; /* Fade in and slide up */
+  animation-fill-mode: both; /* Ensure the animation stays in its final state */
+}
+
+.home-text p {
+  animation: fadeInUp 1s ease-out 0.4s; /* Fade in and slide up with delay */
+  animation-fill-mode: both; /* Ensure the animation stays in its final state */
 }
 
 .home-text span {
@@ -272,6 +279,18 @@ nav button{
   font-size: 2rem;
   color: var(--color-terra);
 
+}
+
+/* Keyframes for fade-in and slide-up animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+  }
 }
 
 .posts_container {
@@ -1224,7 +1243,7 @@ footer ul a:hover{
   }
 
   .home-text {
-    margin-left: 1rem; /* Remove most of the left margin */
+    margin: 1rem; /* Remove most of the left margin */
     text-align: center; /* Center-align text */
   }
 
@@ -1318,6 +1337,29 @@ footer ul a:hover{
   .contact-form .btn {
     font-size: 0.9rem;
     padding: 8px 16px;
+  }
+  /*===============================POST==================================*/
+  .post {
+    width: 100%; /* Display 1 post per row */
+  }
+
+  .post_info .post_title {
+    font-size: 1rem; /* Smaller title font */
+  }
+
+  .post_info .RatePerDay,
+  .post_info .vPLNo,
+  .post_info .Availability {
+    font-size: 0.8rem; /* Smaller text */
+  }
+
+  .rate-and-rent {
+    flex-direction: row; /* Stack rate and rent button vertically */
+    align-items: flex-start;
+  }
+
+  .rate {
+    margin-bottom: 10px; /* Add spacing between rate and button */
   }
   /*===============================VEHICLE SINGLE POST==================================*/
     .singepost_container{
