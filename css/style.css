@@ -23,6 +23,8 @@
   --color-sky-blue: #A4DBE8;
   --color-terra: #f8fafa;
   --color-navy: #1A2940;
+  --color-soft-blue: #6c63ff;
+  --color-royal-blue: #4b47d9;
 
   --color-davy: #4f5052;
   --color-black: #000000;
@@ -373,19 +375,6 @@ nav button{
   margin-bottom: 0.5rem;
 }
 
-.rent-btn {
-  background-color: var(--color-terra);
-  color: var(--color-bg);
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.rent-btn:hover {
-  background-color: var(--color-terra-dark);
-}
 
 .rate-and-rent {
   display: flex;
@@ -405,13 +394,13 @@ nav button{
 .rent-now-link {
   font-size: 1.0rem;
   font-weight: bold;
-  color: #6c63ff; /* Purple color */
+  color: var(--color-soft-blue);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .rent-now-link:hover {
-  color: #4b47d9; /* Darker purple on hover */
+  color: var(--color-royal-blue);
 }
 
 @keyframes fadeIn {

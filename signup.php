@@ -13,7 +13,7 @@ if(isset($_SESSION['customer_ID'])){
   <title>Car Rental Website</title>
 
   <!--Style-->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/signin.css">
     <!--Icon-->
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
   <!--FONTS-->
@@ -29,7 +29,7 @@ if(isset($_SESSION['customer_ID'])){
   <form class="signup" action="signup.php" method="POST" enctype="multipart/form-data">
     <input type="text" name="fname" placeholder="First Name">
     <input type="text" name="lname" placeholder="Last Name">
-    <label for="DOB" style="color: var(--color-white);">Birth Date</label>
+    <label for="DOB">Birth Date</label>
     <input type="date" name="birthdate" id="DOB">
     <input type="tel" name="contactNo" placeholder="Contact Number">
     <input type="email" name="email" placeholder="Email">
