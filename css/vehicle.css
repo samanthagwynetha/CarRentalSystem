@@ -1,0 +1,138 @@
+
+  
+  /* Container for Vehicle Details */
+  .vehicle-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 1200px;
+  }
+  
+  /* Left Section: Vehicle Image */
+  .vehicle-image {
+    flex: 1;
+    max-width: 500px;
+  }
+  
+  .vehicle-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Right Section: Vehicle Info */
+  .vehicle-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .vehicle-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .vehicle-price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #6c63ff;
+    margin-bottom: 1rem;
+  }
+  
+  .vehicle-availability {
+    font-size: 1rem;
+    color: #28a745; /* Green for availability */
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .vehicle-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  .vehicle-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .vehicle-actions input[type="number"] {
+    width: 60px;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .vehicle-actions button {
+    background: #6c63ff;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+  }
+  
+  .vehicle-actions button:hover {
+    background: #4b47d9;
+  }
+  
+  /* Thumbnail Section */
+  .vehicle-thumbnails {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .vehicle-thumbnails img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.3s ease;
+  }
+  
+  .vehicle-thumbnails img:hover {
+    border-color: #6c63ff;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .vehicle-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .vehicle-image {
+      max-width: 100%;
+    }
+  
+    .vehicle-info {
+      text-align: center;
+    }
+  
+    .vehicle-actions {
+      flex-direction: column;
+    }
+  
+    .vehicle-actions input[type="number"] {
+      width: 100%;
+    }
+  
+    .vehicle-actions button {
+      width: 100%;
+    }
+  }

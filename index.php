@@ -53,105 +53,100 @@ $vehicles = mysqli_query($connection, $query);
   </div>
 </section>
 
-  <!--===========================SERVICES==================================-->
-  <section class="home-services" id="home-services">
-  <p class="top-text">BEST SERVICES</p>
-  <h2 class="top-text sersec">Explore Vehicle</h2>
-
-  <div class="container posts_container">
-    <?php while ($vehicle = mysqli_fetch_assoc($vehicles)) : ?>
-      <article class="post">
-        <div class="post_thumbnail"
-        style=" border-radius: var(--card-border-radius-5)0;
-                background:var(--color-sleepyblue);
-                color: white;
-                overflow: hidden;
-                margin-bottom:1.6rem;
-                "
-        >
-          <img class="thumbnail_img" src="./images/<?= $vehicle['vImage'] ?>" 
-            style = " width: 100%;
-                    height: 175px;
-                    object-fit: contain;" >
-        </div>
-        <div class="post_info">
-        <?php 
-        //fetch category from categorues table usin
-        $CategoryID = $vehicle['CategoryID'];
-        $category_query = "SELECT * FROM category WHERE CategoryID=$CategoryID";
-        $category_result = mysqli_query($connection, $category_query);
-        $category = mysqli_fetch_assoc($category_result);
-        ?>
-
-        <a href="<?= ROOT_URL ?>category-posts.php?CategoryID=<?= $vehicle['CategoryID']?>" class="category_button"><?= $category['VehicleType']?></a>
-          
+<!-- =========================== SERVICES ================================ -->
+<section class="home-services" id="home-services">
+    <h2 class="header">BEST SERVICES</h2>
+    <p class="top-text subheading">Explore Siargao effortlessly with our well-maintained and reliable rental vehicles, perfect for every adventure.</p>
+    <!-- ========================= CATEGORY BUTTONS ========================= -->
+    <section class="category_buttons">
+    <div class="container category_buttons-container">
         <?php
-          echo '<h3 class="post_title"><a href="post.php">' . 
-          $vehicle['vBrand'] . ' <span style="color: red;">' . 
-          $vehicle['vModel'] . '</span></a></h3>';
-          echo '<p class="RatePerDay">&#8369;' . $vehicle['RatePerDay'] . ' / Day</p>';
+        // Fetch all categories from the database
+        $all_categories_query = "SELECT * FROM category";
+        $all_categories = mysqli_query($connection, $all_categories_query);
+
+        while ($category = mysqli_fetch_assoc($all_categories)) :
         ?>
-          <p class="vPLNo"><?= $vehicle['vPLNo'] ?></p>
-          <!-- <p class="RatePerDay"><?= $vehicle['RatePerDay'] ?> <span>/ Day</span></p>-->
-          <p class="Availability"><?= $vehicle['Availability'] ?></p>
-          <a href="vehicle.php?vID=<?php echo urlencode($vehicle['VehicleID']);?>">
-          <button id="rent-btn" class="rent-btn">Rent Now</button></a>
-        </div>
-      </article>
-    <?php endwhile ?>
-  </div>
+            <!-- Dynamically generate a button for each category -->
+            <a href="<?= ROOT_URL ?>category-posts.php?CategoryID=<?= $category['CategoryID'] ?>" class="category_button">
+                <?= htmlspecialchars($category['VehicleType']) ?>
+            </a>
+        <?php endwhile; ?>
+    </div>
 </section>
+    <!-- ========================= END CATEGORY BUTTONS ========================= -->
+
+    <div class="container posts_container">
+    <?php while ($vehicle = mysqli_fetch_assoc($vehicles)) : ?>
+        <article class="post">
+            <div class="post_thumbnail">
+                <img class="thumbnail_img" src="./images/<?= htmlspecialchars($vehicle['vImage']) ?>" alt="Vehicle Image">
+            </div>
+            <div class="post_info">
+                <h3 class="post_title">
+                    <a href="post.php">
+                        <?= htmlspecialchars($vehicle['vBrand']) ?> 
+                        <span style="color: red;"><?= htmlspecialchars($vehicle['vModel']) ?></span>
+                    </a>
+                </h3>
+                <p class="vPLNo"><?= htmlspecialchars($vehicle['vPLNo']) ?></p>
+                <p class="Availability"><?= htmlspecialchars($vehicle['Availability']) ?></p>
+                <div class="rate-and-rent">
+                    <p class="RatePerDay">
+                        <span class="rate">&#8369;<?= number_format($vehicle['RatePerDay']) ?></span> / Day
+                    </p>
+                    <a href="vehicle.php?vID=<?= urlencode($vehicle['VehicleID']); ?>" class="rent-now-link">
+                        Rent Now →
+                    </a>
+                </div>
+            </div>
+        </article>
+    <?php endwhile; ?>
+</div>
+</section>
+<!-- =========================== END SERVICES ================================ -->
+
 
   <!--=======================CONTACT====================-->
-  <section class="home-contact" id="home-contact">
-    <h2>GET IN TOUCH</h2>
-
-  <div class="contact-info">
-    <div class="info-item">
-      <img src="" alt="">
-      <h2>Location</h2>
-      <p>General Luna, Siargao <br> Del Norte, Philippines</p>
+  <section class="contact-section" id="contact">
+    <div class="container">
+        <h2 class="contact-heading">Contact <span>Us</span></h2>
+        <p class="contact-description">
+        Explore Siargao with ease let us help you find the <br> perfect ride for your island adventure!
+        </p>
+        <div class="contact-content">
+            <div class="contact-detail">
+                <h3>Contact detail</h3>
+                <p>Have questions or need assistance? Our team is here to help you with bookings, inquiries, and support.</p>
+                <ul>
+                    <li>
+                        <i class="uil uil-phone"></i>
+                        +63 977 272 5054
+                    </li>
+                    <li>
+                        <i class="uil uil-envelope"></i>
+                        pananr@gmail.com
+                    </li>
+                    <li>
+                        <i class="uil uil-map-marker"></i>
+                        General Luna, Siargao, Del Norte, Philippines
+                    </li>
+                </ul>
+            </div>
+            <div class="contact-form">
+                <form action="https://formsubmit.co/uunaaah@gmail.com" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="Name" placeholder="Name" required>
+                        <input type="email" name="Email" placeholder="Email" required>
+                    </div>
+                    <input type="text" name="Subject" placeholder="Subject" required>
+                    <textarea name="Message" placeholder="Message" required></textarea>
+                    <button type="submit" class="btn">Send Now</button>
+                </form>
+            </div>
+        </div>
     </div>
-
-    <div class="info-item">
-      <img src="" alt="">
-      <h2>Phone</h2>
-      <p>+63 977 272 5054<br>(082) 297-1235</p>
-    </div>
-
-    <div class="info-item">
-      <img src="" alt="">
-      <h2>Email</h2>
-      <p>PanAn@gmail.com</p>
-    </div>
- </div>
-    
-
-  <div class="contact-container">
-    <form>
-        <input type="text" name="Name" placeholder="Full Name" required>
-        <input type="email" name="Email" placeholder="Email" required>
-        <textarea name="Message" placeholder="Message" required></textarea>
-        <button type="submit" class="btn">Send</button>
-    </form>
-  </div>
 </section>
-
-  <!--=======================CATEGORY BUTTON====================-->
-
-  <section class="category_buttons">
-    <div class="container category_buttons-container">
-    <?php
-    $all_categories_query = "SELECT *FROM category";
-    $all_categories = mysqli_query($connection, $all_categories_query); 
-    ?>
-    <?php while ($category = mysqli_fetch_assoc($all_categories)) : ?>
-      <a href="<?= ROOT_URL ?>category-posts.php?categoryID=<?= $category['CategoryID'] ?>" 
-      class="category_button"><?= $category['VehicleType']?></a>
-      <?php endwhile ?>
-    </div>
-  </section>
-  
 
   <!--=======================END OF THE CATEGORY BUTTON====================-->
 

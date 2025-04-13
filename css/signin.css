@@ -1,0 +1,114 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: radial-gradient(circle at top, #1a1a1a, #0d0d0d); /* Dark radial gradient */
+    color: #fff; /* Light text color for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Form Section */
+  .form_section {
+    width: 100%;
+    max-width: 400px;
+    background: #1a1a1a; /* Dark background for the form */
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    text-align: center;
+  }
+  
+  .form_section h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #fff; /* Light heading color */
+  }
+  
+  .form_section p {
+    font-size: 0.9rem;
+    color: #aaa; /* Softer gray for paragraph text */
+    margin-bottom: 1.5rem;
+  }
+  
+  .form_section a {
+    color: #6c63ff; /* Purple link color */
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .form_section a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Input Fields */
+  .form_section input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #333; /* Darker gray border */
+    border-radius: 8px;
+    background: #0d0d0d; /* Dark input background */
+    color: #fff; /* Light text color */
+    font-size: 1rem;
+  }
+  
+  .form_section input::placeholder {
+    color: #666; /* Placeholder text color */
+  }
+  
+  .form_section input:focus {
+    outline: none;
+    border-color: #6c63ff; /* Purple border on focus */
+  }
+  
+  /* Button */
+  .form_section .btn {
+    width: 100%;
+    padding: 0.8rem;
+    background: #6c63ff; /* Purple button */
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .form_section .btn:hover {
+    background: #4b47d9; /* Darker purple on hover */
+  }
+  
+  /* Small Text */
+  .form_section small {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #aaa; /* Softer gray for small text */
+  }
+  
+  .form_section small a {
+    color: #6c63ff;
+    font-weight: 500;
+  }
+  
+  .form_section small a:hover {
+    text-decoration: underline;
+  }
+
+  form.signup label {
+    display: block; 
+    text-align: left; 
+    margin-bottom: 0.5rem; 
+    font-weight: 500; 
+    color: #c7c7c7; 
+  }
