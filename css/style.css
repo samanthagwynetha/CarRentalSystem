@@ -315,6 +315,10 @@ nav button{
   width: 300px; 
 }
 
+.posts {
+  margin-top: 5rem; /* Adds a 2rem margin at the top */
+}
+
 
 .post:hover .post_thumbnail img {
   transform: scale(1.1); /* Slight zoom on hover */
@@ -858,14 +862,13 @@ footer ul a:hover{
 
 /*===============================CATEGORY POSTS==================================*/
     .category_title {
-      
       background: var(--color-gray-900);
       display: grid;
       place-items: center;
     }
  
       .category_title h2 {
-
+        color: var(--color-terra);
         margin-top: 8rem;;
 
       }
@@ -1139,6 +1142,7 @@ footer ul a:hover{
     align-items: center;
   }
   /*===============================END HOME==================================*/
+  
   .posts_container{
       grid-template-columns: 1fr 1fr; 
       gap: 3rem;

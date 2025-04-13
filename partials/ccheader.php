@@ -11,6 +11,7 @@ require 'config/database.php';
 
   <!--Style-->
     <link rel="stylesheet" href="<?= ROOT_URL ?>css/cusdash.css">
+    <link rel="stylesheet" href="<?= ROOT_URL ?>css/vehicle.css">
     <!--Icon-->
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
   <!--FONTS-->
