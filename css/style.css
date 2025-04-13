@@ -112,6 +112,10 @@ img{
   object-fit: cover;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /*===============================NAV ;>==================================*/
 
 nav{
