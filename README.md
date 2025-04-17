@@ -7,8 +7,7 @@
 ## 📸 Demo
 
 🚧 *Live demo not available yet*  
-📷 *![image](https://github.com/user-attachments/assets/d31df920-98b0-4ac7-931e-be5fec0a4fdc)
-*
+📷 ![image](https://github.com/user-attachments/assets/d31df920-98b0-4ac7-931e-be5fec0a4fdc)
 
 ---
 
